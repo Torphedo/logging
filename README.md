@@ -12,6 +12,7 @@ This piece of code allows you to print errors in color to help them stand out, e
  
 ```c
 #include "logging.h"
+#include "malloc.h"
 
 int main() {
     unsigned int size = 1024;
