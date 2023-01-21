@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdarg.h>
+
 #include "logging.h"
 
 #ifdef _WIN32
@@ -25,10 +27,12 @@ unsigned short ansi_enabled = 1;
 
 void log_error(print_type type, char* format_str, ...)
 {
+    #ifdef _WIN32
     if (ansi_enabled == 0)
     {
         enable_win_ansi();
     }
+    #endif
     switch (type) {
     case INFO:
         printf("[\033[32mINFO\033[0m] "); // Green
