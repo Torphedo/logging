@@ -60,10 +60,10 @@ void log_error(print_type type, char* format_str, ...)
 			printf("[\033[34mDEBUG\033[0m] "); // Blue
 			break;
 		}
-	}
 
-    va_list arg_list;
-    va_start(arg_list, format_str);
-    vprintf(format_str, arg_list);
-    va_end(arg_list);
+		va_list arg_list;
+		va_start(arg_list, format_str);
+		vprintf(format_str, arg_list);
+		va_end(arg_list);
+	}
 }
